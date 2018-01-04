@@ -62,6 +62,9 @@ class Student
       student = Student.new(row[0],row[1],row[2])
       student.save
       student
+    end
+
+    
 
 
 
