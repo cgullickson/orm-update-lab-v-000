@@ -7,7 +7,7 @@ class Student
     def initialize (id = nil, name, grade)
       @name = name
       @grade = grade
-      @id = nil
+      @id = id
     end
 
     def self.create_table
@@ -69,6 +69,7 @@ class Student
       SELECT * FROM students
       WHERE name = ?
       SQL
+
       student = DB[:conn].execute(sql, name)[0]
       Student.new(student[0],student[1],student[2])
     end
